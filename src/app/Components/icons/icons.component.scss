@@ -1,0 +1,26 @@
+.addnotebutton {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    padding-left: 7px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.addnotebutton button {
+    border: 0px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.material-symbols-outlined:hover {
+    background-color: rgb(228, 219, 219);
+    border-radius: 20px;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

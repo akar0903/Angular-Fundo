@@ -1,0 +1,90 @@
+.create {
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+
+.fname,
+.lname,
+.password,
+.cpassword {
+    display: inline-block;
+    width: 30%;
+}
+
+.fname {
+    // margin-right: 3%;
+    margin-left: 15px;
+}
+
+.lname {
+    margin-left: 0px;
+    margin-right: 40px;
+}
+
+.fname mat-form-field,
+.lname mat-form-field,
+.email mat-form-field,
+.password mat-form-field,
+.cpassword mat-form-field {
+    width: 50%;
+}
+
+.email {
+    margin-left: 15px;
+}
+
+.words {
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.use {
+    margin-left: 15px;
+    font-weight: bold;
+    color: aqua;
+    cursor: pointer;
+}
+
+.password {
+    margin-left: 15px;
+}
+
+.cpassword {
+    margin-left: 15px;
+}
+
+.uses {
+    margin-left: 15px;
+}
+
+.checkbox {
+    margin-left: 10px;
+}
+
+.signin {
+    margin-top: 40px;
+    margin-left: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    color: darkblue;
+    display: inline-block;
+}
+
+.account {
+    margin-left: 50px;
+    display: inline-block;
+}
+
+.image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 15%;
+}
+
+.below {
+    font-weight: bold;
+}

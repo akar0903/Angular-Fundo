@@ -1,0 +1,32 @@
+<div class="body">
+    <div class="container">
+        <p class="sign">Sign in</p>
+        <form [formGroup]="loginform" (ngSubmit)="LoginSubmit()">
+            <mat-form-field appearance="outline">
+                <mat-label>Email or phone</mat-label>
+                <input matInput placeholder="Email or phone" formControlName="email">
+                <mat-error *ngIf="loginform.hasError('required','email')">
+                    Email is required
+                </mat-error>
+                <mat-error *ngIf="loginform.hasError('email','email')">
+                    Email is invalid
+                </mat-error>
+            </mat-form-field>
+            <div class="password">
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="Password" formControlName="password">
+                    <mat-error *ngIf="loginform.hasError('required','password')">
+                        Password is required
+                    </mat-error>
+                </mat-form-field>
+                <div class="forget">
+                    <button mat-button color="primary">Forgot Password?</button>
+                </div>
+            </div>
+            <div class="account">
+                <button mat-button color="primary">Create a account</button>
+                <button mat-raised-button color="primary">Next</button>
+            </div>
+        </form>
+    </div>

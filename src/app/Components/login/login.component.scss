@@ -1,0 +1,63 @@
+.container {
+    display: flex;
+    border: 2px solid grey;
+    height: 70vh;
+    //width: 60vh;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+    width: 60vh;
+    margin-left: 80vh;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+
+.body {
+    align-items: center;
+    justify-content: center;
+    width: 100vh;
+    height: 100vh;
+}
+
+.account {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.password {
+    display: grid;
+    //margin-bottom: 30px;
+    width: 300px;
+}
+
+.next {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.sign {
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.forget {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.account {
+    flex-direction: row;
+    margin-right: 20px;
+    column-gap: 10vh;
+}
+
+.next {
+    flex-direction: row;
+}
+
+.email {
+    display: grid;
+    width: 300px;
+}

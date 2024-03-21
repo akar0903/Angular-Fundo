@@ -1,0 +1,66 @@
+.box1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+    margin-left: 65vh;
+    height: 6.5vh;
+    width: 41vw;
+    border: 0px;
+    background-color: transparent;
+    box-shadow: 5px 5px 10px rgb(177, 176, 176);
+}
+
+input:focus {
+    outline: none;
+}
+
+input {
+    width: 30vw;
+    border: 0px;
+    border-top-left-radius: 1vh;
+    border-bottom-left-radius: 1vh;
+    padding-left: 2vh;
+    font-size: larger;
+}
+
+input::placeholder {
+    color: rgb(91, 90, 90);
+}
+
+.first {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 11vw;
+}
+
+.one,
+.two,
+.three {
+    background: white;
+    text-align: center;
+    width: 3rem;
+    min-width: 3rem;
+    border-radius: 0.313rem;
+    padding: 0.313rem;
+    font-size: 24px;
+    font-weight: 900;
+    cursor: pointer;
+    border: none;
+    color: grey;
+}
+
+.one:hover {
+    background-color: rgb(228, 219, 219);
+    border-radius: 3vh;
+}
+
+.two:hover {
+    background-color: rgb(228, 219, 219);
+    border-radius: 3vh;
+}
+
+.three:hover {
+    background-color: rgb(228, 219, 219);
+    border-radius: 3vh;
+}

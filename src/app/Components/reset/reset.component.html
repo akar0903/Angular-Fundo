@@ -1,0 +1,30 @@
+<div class="box1">
+    <div class="box2">
+        <div class="firstdiv">
+            <img src="https://pluspng.com/img-png/google-logo-png-revised-google-logo-1600.png">
+            <div class="logo">
+                <p id="logo1">Create a strong password</p>
+                <p>Create a strong password with a mix of letters, numbers & symbols.</p>
+            </div>
+        </div>
+        <div class="seconddiv">
+            <div class="forgotpass">
+                <form [formGroup]="resetform" (ngSubmit)="ResetSubmit()"></form>
+                <input id="emailphone" type="password" placeholder="New Password*" formControlName="password">
+                <mat-error *ngIf="resetform.hasError('required','password')">
+                    Password is required
+                </mat-error>
+                <input id="emailphones" type="password" placeholder="Confirm password*" formControlName="cpassword">
+                <mat-error *ngIf="resetform.hasError('password','password')">
+                    Password should be same
+                </mat-error>
+            </div>
+            <div class="check">
+                <input type="checkbox">Show password
+            </div>
+            <div class="resetbutton">
+                <button>Reset</button>
+            </div>
+        </div>
+    </div>
+</div>
