@@ -24,7 +24,8 @@ const routes: Routes = [
   canActivate:[AuthGuard],
   children:[
     {path:'regDemo',component:RegisterComponent},
-    //{path:'get',component:GetnoteComponent}
+    {path:'archive',component:ArchiveComponent},
+    {path:'get',component:GetnoteComponent}
   ]},
   {path:'dashboard',component:DashboardComponent},
   {path:'icons',component:IconsComponent},

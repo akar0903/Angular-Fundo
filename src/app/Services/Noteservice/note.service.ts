@@ -43,6 +43,17 @@ export class NoteService {
       })
     
     }
-    return this.httpService.putMethod('https://localhost:44355/api/Note/archieve?notesId='+reqData.noteId,{},true, header)
+    return this.httpService.putMethod('https://localhost:44355/api/Note/archieve?notesId='+reqData.noteId,{},true, header);
+  }
+  notesColor(reqData:any){
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization': 'Bearer '+this.token
+      }) 
+    }
+    return this.httpService.putService("https://localhost:44355/api/Note/addColor?colour="+reqData.color+"&notesId="+reqData.noteId,{},true,header);
   }
 }
+
+

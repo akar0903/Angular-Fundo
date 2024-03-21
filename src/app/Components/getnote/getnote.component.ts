@@ -18,6 +18,9 @@ export class GetnoteComponent implements OnInit{
       this.notesArray=response.data;
       console.log("Stored to array variable");
       console.log(this.notesArray);
+      this.notesArray=this.notesArray.filter((object:any)=>{
+        return object.isArchive == false;
+      })
     })
   }
 

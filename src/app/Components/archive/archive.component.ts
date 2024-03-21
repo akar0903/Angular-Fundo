@@ -21,6 +21,5 @@ export class ArchiveComponent {
       })
       console.log(this.archievList)
     })
-  }
-  
+  }  
 }

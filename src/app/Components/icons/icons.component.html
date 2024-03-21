@@ -9,7 +9,7 @@
         person_add
       </span>
     </button>
-    <button>
+    <button id="3" class="moreicons" [matMenuTriggerFor]="palletemenu">
     <span class="material-symbols-outlined">
       palette
     </span>
@@ -20,7 +20,7 @@
     </span>
   </button>
     <button>
-    <span class="material-symbols-outlined" (click)="onArchiev">
+    <span class="material-symbols-outlined" (click)="onArchiev()">
       archive
     </span>
   </button>
@@ -29,4 +29,10 @@
       more_vert
     </span>
   </button>
+    <mat-menu #palletemenu="matMenu" xPosition="before" id="colorpallete" class="test2">
+        <div *ngFor='let colors of colorArray'>
+            <button class="coloricon" [style.background]="colors.code" (click)="selectColor(colors)">
+            </button>
+        </div>
+    </mat-menu>
 </div>

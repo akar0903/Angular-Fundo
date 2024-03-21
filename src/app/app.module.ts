@@ -24,6 +24,7 @@ import { GetnoteComponent } from './Components/getnote/getnote.component';
 import { UpdatenoteComponent } from './Components/updatenote/updatenote.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ArchiveComponent } from './Components/archive/archive.component';
+import {MatMenuModule} from '@angular/material/menu';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +52,8 @@ import { ArchiveComponent } from './Components/archive/archive.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    MatMenuModule
   ],
   providers: [
     provideClientHydration(),
