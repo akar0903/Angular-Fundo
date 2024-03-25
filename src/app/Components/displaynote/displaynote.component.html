@@ -1,5 +1,5 @@
 <div *ngFor="let notes of notesList" class="card">
-    <mat-card class="notescontainer" [style.background]="notes.addColor">
+    <mat-card class="notescontainer" [style.background]="notes.colour">
         <div class="inner">
             <mat-card-title role="textbox" class="title" (click)="editNoteDialogBox(notes)" style=" display: block; overflow-wrap: break-word;">{{notes.title}}</mat-card-title>
             <button class="kee1"><span class="material-symbols-outlined" >keep</span> </button>

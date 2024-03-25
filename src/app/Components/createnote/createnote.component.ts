@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NoteService } from '../../Services/Noteservice/note.service';
 
@@ -7,7 +7,8 @@ import { NoteService } from '../../Services/Noteservice/note.service';
   templateUrl: './createnote.component.html',
   styleUrl: './createnote.component.scss'
 })
-export class CreatenoteComponent {
+export class CreatenoteComponent implements OnInit{
+  @Output() refreshEventCreate=new EventEmitter<string>();
   display: boolean = true;
   submitted=false;
   notesForm!:FormGroup;
@@ -20,7 +21,7 @@ export class CreatenoteComponent {
       }
     )
   }
-  Notesubmit(){
+  onSubmit(){
     this.submitted=true;
     if(this.notesForm.valid){
       let reqData={
@@ -30,6 +31,7 @@ export class CreatenoteComponent {
       console.log(reqData);
       this.notes.addNotes(reqData).subscribe((res:any)=>{
         console.log(res);
+        this.refreshEventCreate.emit(res)
       });
     }
     this.display=true;

@@ -9,6 +9,7 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrl: './displaynote.component.scss'
 })
 export class DisplaynoteComponent implements OnInit{
+  @Output() refreshUpdateNotes=new EventEmitter<string>()
 
   constructor(public dialog:MatDialog ){}
   message:any
@@ -16,7 +17,7 @@ export class DisplaynoteComponent implements OnInit{
     
   }
   @Input() notesList:any;
-  @Output() refreshUpdateNotes=new EventEmitter<string>()
+  //@Output() refreshUpdateNotes=new EventEmitter<string>()
 
   editNoteDialogBox(notes:any){
     const dialogbox=this.dialog.open(UpdatenoteComponent,{
@@ -28,6 +29,11 @@ export class DisplaynoteComponent implements OnInit{
       console.log(res);
       this.refreshUpdateNotes.emit(res)
     })
+  }
+  eventupdatenote($event:any){
+    console.log("Icon to display"+$event);
+    this.message=$event
+    this.refreshUpdateNotes.emit(this.message)
   } 
   
 

@@ -10,9 +10,9 @@ export class GetnoteComponent implements OnInit{
   notesArray:any
   constructor(private notes:NoteService){}
   ngOnInit(): void {
-      this.NoteSubmit()
+      this.onSubmit()
   }
-  NoteSubmit(){
+  onSubmit(){
     this.notes.getNotes().subscribe((response:any)=>{
       console.log(response);
       this.notesArray=response.data;
@@ -22,6 +22,15 @@ export class GetnoteComponent implements OnInit{
         return object.isArchive == false;
       })
     })
+  }
+  receiverRefreshEventCreate($event:any){
+    console.log("Create to GetAllNotes"+$event);
+    this.onSubmit()
+  }
+
+  displayNotes($event:any){
+    console.log("Update to GetAllNotes"+$event);
+    this.onSubmit()
   }
 
 }

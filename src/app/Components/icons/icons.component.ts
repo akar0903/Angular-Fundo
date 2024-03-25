@@ -1,4 +1,4 @@
-import { Component,Input, OnInit } from '@angular/core';
+import { Component,EventEmitter,Input, OnInit, Output } from '@angular/core';
 import { NoteService } from '../../Services/Noteservice/note.service';
 
 
@@ -7,12 +7,12 @@ import { NoteService } from '../../Services/Noteservice/note.service';
   templateUrl: './icons.component.html',
   styleUrl: './icons.component.scss'
 })
-export class IconsComponent implements OnInit{
-  
+export class IconsComponent implements OnInit{  
   ngOnInit(): void {
    
   }
   @Input() notesObject:any;
+  @Output() eventchange=new EventEmitter<string>()
   constructor(private Notes:NoteService){}
   onDelete(){
     let reqData={
@@ -21,7 +21,7 @@ export class IconsComponent implements OnInit{
     console.log(reqData)
     this.Notes.trashnotes(reqData).subscribe((res:any)=>{
       console.log("Note Trashed Successfully",res)
-      //this.eventchange.emit(res)
+      this.eventchange.emit(res)
     })
   }
   onArchiev(){
@@ -31,6 +31,8 @@ export class IconsComponent implements OnInit{
     console.log(reqData)
     this.Notes.ArchievNotes(reqData).subscribe((response:any)=>{
       console.log(response)
+      this.eventchange.emit(response)
+
     })
   }
   colorArray:Array<any>=[
@@ -43,15 +45,18 @@ export class IconsComponent implements OnInit{
     {code:'#eee8aa',name:'PaleGoldenRod'},
     {code:'#d3d3d3',name:'grey'},
   ];
-  selectColor(addColor:any){
+  selectColor(colour:any){
     let reqData={
-      addColor:addColor.name,
+      colour:colour.name,
       noteId:this.notesObject.noteId
     }
     this.Notes.notesColor(reqData).subscribe((response:any)=>{
       console.log(response);
+      this.eventchange.emit(response)
     })
   }
-  
-
+  refresharchivenotes($event:any){
+    console.log("Archive noted"+$event);
+    this.onArchiev()
+  }
 }

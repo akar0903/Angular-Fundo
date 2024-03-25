@@ -10,7 +10,7 @@ export class UpdatenoteComponent implements OnInit{
   title:any;
   description:any;
   id:any
-  //color:any 
+  colour:any 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data:any,
     public dialogbox:MatDialogRef<UpdatenoteComponent>,
@@ -19,7 +19,7 @@ export class UpdatenoteComponent implements OnInit{
       this.title=data.title,
       this.description=data.description,
       this.id=data.noteId
-      //this.color=data.color
+      this.colour=data.colour
 
     }
     ngOnInit(): void {   
@@ -28,7 +28,7 @@ export class UpdatenoteComponent implements OnInit{
       let reqdata={
         title:this.title,
         description:this.description,
-        //color:this.color
+        addColor:this.colour
       }
       this.notes.updateNotes(reqdata,this.id).subscribe((response:any)=>{
         console.log(response);

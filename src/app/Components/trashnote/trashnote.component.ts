@@ -11,10 +11,10 @@ export class TrashnoteComponent {
   constructor(private notes: NoteService){}
 
   ngOnInit(): void {
-    this.Notesubmit()
+    this.onSubmit()
   }
 
-  Notesubmit(){
+  onSubmit(){
     this.notes.getNotes().subscribe((res:any)=>{
       this.trashlist=res.data
       this.trashlist=this.trashlist.filter((object:any)=>{

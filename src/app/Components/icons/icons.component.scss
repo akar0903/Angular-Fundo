@@ -1,16 +1,16 @@
 .addnotebutton {
     width: 100%;
     display: flex;
-    gap: 8px;
-    padding-left: 7px;
+    gap: 1px;
+    padding-left: -15px;
     background-color: transparent;
     cursor: pointer;
 }
 
 .addnotebutton button {
     border: 0px;
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     background-color: transparent;
     cursor: pointer;
 }
@@ -125,7 +125,7 @@
     border-radius: 5vh;
     margin: 5px;
     cursor: pointer;
-    justify-content: center;
+    //justify-content: center;
 }
 
 .colorIcon:focus {

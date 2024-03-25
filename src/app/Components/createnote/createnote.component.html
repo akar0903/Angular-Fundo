@@ -23,7 +23,7 @@
 </ng-template>
 <ng-template #box2>
     <!-- <div *ngIf="display;box1"></div> -->
-    <form [formGroup]="notesForm" (ngSubmit)="Notesubmit()">
+    <form [formGroup]="notesForm" (ngSubmit)="onSubmit()">
         <div class="box2">
             <div class="div1">
                 <input type="text" placeholder="Title" id="title" formControlName="title">

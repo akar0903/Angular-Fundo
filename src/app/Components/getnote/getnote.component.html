@@ -1,5 +1,5 @@
 <div>
-    <app-createnote></app-createnote>
-    <app-displaynote [notesList]="notesArray"></app-displaynote>
+    <app-createnote (refreshEventCreate)="receiverRefreshEventCreate($event)"></app-createnote>
+    <app-displaynote [notesList]="notesArray" (refreshUpdateNotes)="displayNotes($event)" class="display"></app-displaynote>
     <!-- <app-displaynote></app-displaynote> -->>
 </div>

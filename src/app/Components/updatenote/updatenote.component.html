@@ -1,6 +1,6 @@
-<div [style.background]="data.color">
+<div [style.background]="data.addColor">
     <div class="text-Title">
-        <mat-card-title><input matInput [(ngModel)]="title" [style.background]="data.color" class="inputtitle">
+        <mat-card-title><input matInput [(ngModel)]="title" [style.background]="data.addColor" class="inputtitle">
         </mat-card-title>
         <div class="kee1"> <span class="material-symbols-outlined">
             keep
@@ -9,7 +9,7 @@
 
     </div>
     <div class="text-body">
-        <input matInput [style.background]="data.color" [(ngModel)]="description" class="inputdesc">
+        <input matInput [style.background]="data.addColor" [(ngModel)]="description" class="inputdesc">
     </div>
     <div fxLayout="row" fxLayoutAlign="space-between end" class="icons">
         <div class="icons">

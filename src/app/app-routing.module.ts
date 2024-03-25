@@ -27,7 +27,8 @@ const routes: Routes = [
   children:[
     {path:'regDemo',component:RegisterComponent},
     {path:'archive',component:ArchiveComponent},
-    {path:'get',component:GetnoteComponent}
+    {path:'get',component:GetnoteComponent},
+    {path:'trash',component:TrashnoteComponent}
   ]},
   {path:'dashboard',component:DashboardComponent},
   {path:'icons',component:IconsComponent},
