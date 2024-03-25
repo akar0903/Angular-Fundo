@@ -13,6 +13,8 @@ import { DisplaynoteComponent } from './Components/displaynote/displaynote.compo
 import { GetnoteComponent } from './Components/getnote/getnote.component';
 import { UpdatenoteComponent } from './Components/updatenote/updatenote.component';
 import { ArchiveComponent } from './Components/archive/archive.component';
+import { ChatComponent } from './Components/chat/chat.component';
+import { TrashnoteComponent } from './Components/trashnote/trashnote.component';
 const routes: Routes = [
   {path:'',redirectTo:"/register",pathMatch:'full'},
   { path: 'login', component: LoginComponent},
@@ -32,7 +34,9 @@ const routes: Routes = [
   {path:'create',component:CreatenoteComponent},
   {path:'display',component:DisplaynoteComponent},
   {path:'get',component:GetnoteComponent},
-  {path:'archive',component:ArchiveComponent}
+  {path:'archive',component:ArchiveComponent},
+  {path:'chat',component:ChatComponent},
+  {path:'trash',component:TrashnoteComponent}
   // {path:'update',component:UpdatenoteComponent}
 ];
 @NgModule({

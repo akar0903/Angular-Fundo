@@ -25,6 +25,8 @@ import { UpdatenoteComponent } from './Components/updatenote/updatenote.componen
 import {MatDialogModule} from '@angular/material/dialog';
 import { ArchiveComponent } from './Components/archive/archive.component';
 import {MatMenuModule} from '@angular/material/menu';
+import { ChatComponent } from './Components/chat/chat.component';
+import { TrashnoteComponent } from './Components/trashnote/trashnote.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +42,8 @@ import {MatMenuModule} from '@angular/material/menu';
     GetnoteComponent,
     UpdatenoteComponent,
     ArchiveComponent,
+    ChatComponent,
+    TrashnoteComponent,
   ],
   imports: [
     BrowserModule,

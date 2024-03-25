@@ -14,6 +14,16 @@ export class IconsComponent implements OnInit{
   }
   @Input() notesObject:any;
   constructor(private Notes:NoteService){}
+  onDelete(){
+    let reqData={
+      noteId:this.notesObject.noteId,
+    }
+    console.log(reqData)
+    this.Notes.trashnotes(reqData).subscribe((res:any)=>{
+      console.log("Note Trashed Successfully",res)
+      //this.eventchange.emit(res)
+    })
+  }
   onArchiev(){
     let reqData={
       noteId: this.notesObject.noteId
@@ -33,9 +43,9 @@ export class IconsComponent implements OnInit{
     {code:'#eee8aa',name:'PaleGoldenRod'},
     {code:'#d3d3d3',name:'grey'},
   ];
-  selectColor(colors:any){
+  selectColor(addColor:any){
     let reqData={
-      color:colors.name,
+      addColor:addColor.name,
       noteId:this.notesObject.noteId
     }
     this.Notes.notesColor(reqData).subscribe((response:any)=>{

@@ -6,7 +6,7 @@ import { HttpHeaders } from '@angular/common/http';
 })
 export class NoteService {
   token:any;
-  constructor(private httpService:HttpService) {this.token=localStorage.getItem('token') }
+  constructor(private httpService: HttpService) { this.token = localStorage.getItem('token')}
   addNotes(reqData:any){
     let header={
       headers:new HttpHeaders({
@@ -52,7 +52,16 @@ export class NoteService {
         'Authorization': 'Bearer '+this.token
       }) 
     }
-    return this.httpService.putService("https://localhost:44355/api/Note/addColor?colour="+reqData.color+"&notesId="+reqData.noteId,{},true,header);
+    return this.httpService.putService("https://localhost:44355/api/Note/addColor?colour="+reqData.addColor+"&notesId="+reqData.noteId,{},true,header);
+  }
+  trashnotes(reqData:any){
+    let header={
+      headers:new HttpHeaders({
+        'content-type':'application/json',
+        'Authorization':'Bearer '+this.token
+      })
+    }
+    return this.httpService.putService('https://localhost:44318/api/Notes/Trash?NotesId='+reqData.noteId,{},true,header)
   }
 }
 

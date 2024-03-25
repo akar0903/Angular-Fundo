@@ -1,38 +1,47 @@
 <div class="addnotebutton">
-    <button>
+    <button class="one">
       <span class="material-symbols-outlined">
         add_alert
       </span>
     </button>
-    <button>
+    <button class="one1">
       <span class="material-symbols-outlined">
         person_add
       </span>
     </button>
-    <button id="3" class="moreicons" [matMenuTriggerFor]="palletemenu">
+    <button class="two" [matMenuTriggerFor]="palletemenu">
     <span class="material-symbols-outlined">
       palette
     </span>
   </button>
-    <button>
+    <button class="three">
     <span class="material-symbols-outlined">
       image
     </span>
   </button>
-    <button>
+    <button class="four">
     <span class="material-symbols-outlined" (click)="onArchiev()">
       archive
     </span>
   </button>
-    <button>
-    <span class="material-symbols-outlined">
+    <button class="five">
+    <span class="material-symbols-outlined" [matMenuTriggerFor]="moreMenu">
       more_vert
     </span>
   </button>
-    <mat-menu #palletemenu="matMenu" xPosition="before" id="colorpallete" class="test2">
-        <div *ngFor='let colors of colorArray'>
-            <button class="coloricon" [style.background]="colors.code" (click)="selectColor(colors)">
+    <mat-menu #moreMenu="matMenu" xPosition="before">
+        <button mat-menu-item (click)="onDelete()">Delete note</button>
+        <button mat-menu-item>Add label</button>
+        <button mat-menu-item>Add drawing</button>
+        <button mat-menu-item>Make a copy</button>
+        <button mat-menu-item>Show checkboxes</button>
+    </mat-menu>
+    <mat-menu #palletemenu="matMenu" xPosition="before" class="platte">
+        <div class="color">
+            <div *ngFor='let colors of colorArray'>
+                <button class="coloricon" [style.background]="colors.code" (click)="selectColor(colors)">
             </button>
+            </div>
         </div>
     </mat-menu>
 </div>
