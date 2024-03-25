@@ -30,11 +30,27 @@ export class DisplaynoteComponent implements OnInit{
       this.refreshUpdateNotes.emit(res)
     })
   }
+  receiverRefreshEventIcons($event:any){
+    console.log("Done"+$event);
+    this.message=$event 
+    this.refreshUpdateNotes.emit(this.message)
+  }
   eventupdatenote($event:any){
     console.log("Icon to display"+$event);
     this.message=$event
     this.refreshUpdateNotes.emit(this.message)
   } 
+  eventcolournote($event:any){
+    console.log("Icon to display"+$event);
+    this.message=$event
+    this.refreshUpdateNotes.emit(this.message)
+  } 
+  eventarchievenote($event:any){
+    console.log("Icon to display"+$event);
+    this.message=$event
+    this.refreshUpdateNotes.emit(this.message)
+  } 
+  
   
 
 

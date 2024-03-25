@@ -12,7 +12,7 @@ export class IconsComponent implements OnInit{
    
   }
   @Input() notesObject:any;
-  @Output() eventchange=new EventEmitter<string>()
+  @Output() refreshEventIcons=new EventEmitter<string>()
   constructor(private Notes:NoteService){}
   onDelete(){
     let reqData={
@@ -21,7 +21,7 @@ export class IconsComponent implements OnInit{
     console.log(reqData)
     this.Notes.trashnotes(reqData).subscribe((res:any)=>{
       console.log("Note Trashed Successfully",res)
-      this.eventchange.emit(res)
+      this.refreshEventIcons.emit(res)
     })
   }
   onArchiev(){
@@ -31,7 +31,7 @@ export class IconsComponent implements OnInit{
     console.log(reqData)
     this.Notes.ArchievNotes(reqData).subscribe((response:any)=>{
       console.log(response)
-      this.eventchange.emit(response)
+      this.refreshEventIcons.emit(response)
 
     })
   }
@@ -52,7 +52,7 @@ export class IconsComponent implements OnInit{
     }
     this.Notes.notesColor(reqData).subscribe((response:any)=>{
       console.log(response);
-      this.eventchange.emit(response)
+      this.refreshEventIcons.emit(response)
     })
   }
   refresharchivenotes($event:any){
